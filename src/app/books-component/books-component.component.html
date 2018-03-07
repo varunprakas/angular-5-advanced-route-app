@@ -1,0 +1,19 @@
+<br>
+<br>
+<br>
+<br>
+<table align="center" border='1' width='80%' *ngIf='books && books.length > 0'>
+    <tbody>
+        <tr *ngFor='let b of books'>
+            <td> {{b.Id}} </td>
+            <td> {{b.Name }} </td>
+            <td> {{b.Price}} </td>
+            <td> {{b.Rate}} </td>
+            <td><button (click)="onclick(b)">Delete</button></td>
+            <td><button (click)="editclick(b)">Edit</button></td>
+            <td><button (click)="detailsclick(b)">Details</button></td>
+            
+            <!-- <a [routerLink]="['/book',b.Id]">Details</a> -->
+        </tr>
+    </tbody> 
+</table>
